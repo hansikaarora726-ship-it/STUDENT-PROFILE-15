@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - Assignment 15</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4ff;
+            margin: 0;
+            padding: 40px 15px;
+        }
+
+        .profile {
+            max-width: 400px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #d5dbea;
+        }
+
+        h1 {
+            text-align: center;
+            color: #5267a9;
+        }
+
+        .info {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f5f6ff;
+            border-radius: 8px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #5267a9;
+        }
+
+        .footer {
+            text-align: center;
+            color: #777;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile">
+        <h1>Student Profile</h1>
+        <div id="studentInfo"></div>
+        <p class="footer">Web Development - Assignment 15</p>
+    </div>
+
+    <script>
+        // String data type
+        let studentName = "Hansika Arora";
+        let course = "BCA Artificial Intelligence";
+        let college = "Invertis University";
+
+        // Number data type
+        let age = 19;
+        let semester = 3;
+        let cgpa = 8.02;
+
+        // Boolean data type
+        let isStudent = true;
+
+        // Array data type
+        let skills = ["HTML", "CSS", "JavaScript"];
+
+        // Object data type
+        let student = {
+            city: "Bareilly",
+            country: "India"
+        };
+
+        // Display student profile
+        document.getElementById("studentInfo").innerHTML = `
+            <div class="info">
+                <span class="label">Name:</span> ${studentName}
+            </div>
+            <div class="info">
+                <span class="label">Age:</span> ${age}
+            </div>
+            <div class="info">
+                <span class="label">Course:</span> ${course}
+            </div>
+            <div class="info">
+                <span class="label">College:</span> ${college}
+            </div>
+            <div class="info">
+                <span class="label">Semester:</span> ${semester}
+            </div>
+            <div class="info">
+                <span class="label">CGPA:</span> ${cgpa}
+            </div>
+            <div class="info">
+                <span class="label">Student:</span> ${isStudent ? "Yes" : "No"}
+            </div>
+            <div class="info">
+                <span class="label">Skills:</span> ${skills.join(", ")}
+            </div>
+            <div class="info">
+                <span class="label">Location:</span> ${student.city}, ${student.country}
+            </div>
+        `;
+    </script>
+
+</body>
+</html>
